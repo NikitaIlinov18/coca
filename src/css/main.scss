@@ -1,0 +1,20 @@
+@mixin absolute($val: 0) {
+  position: absolute;
+  inset: $val;
+}
+
+.body {
+  &__title {
+    color: grey;
+    background: red;
+    @include absolute(40px);
+
+    &:hover {
+      color: var(--color-yellow);
+    }
+
+    @media (max-width: 1000px) {
+      color: brown;
+    }
+  }
+}
