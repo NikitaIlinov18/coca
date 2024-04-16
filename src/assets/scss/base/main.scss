@@ -13,8 +13,9 @@ html {
 }
 
 body {
-  color: var(--netural-color-100);
-  background-color: var(--netural-color-10);
+  overflow-x: hidden;
+  color: var(--neutral-color-100);
+  background-color: var(--neutral-color-10);
 }
 
 img {
@@ -63,4 +64,9 @@ button {
   max-width: calc(var(--container-width) + (var(--container-padding) * 2));
 }
 
+.hidden {
+  font-size: 0;
+  opacity: 0;
+  visibility: hidden;
+}
 
