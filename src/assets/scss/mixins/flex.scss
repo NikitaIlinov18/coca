@@ -10,8 +10,8 @@
 
 @mixin flex-all-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 @mixin flex-justify-between {
@@ -33,6 +33,6 @@
 @mixin flex-column-all-center {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
