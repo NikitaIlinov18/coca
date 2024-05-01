@@ -9,7 +9,7 @@ export const useBurger = () => {
     burgerMenu.classList.remove('header__right--visible');
     overlay.classList.remove('overlay--visible');
     body.classList.remove('body--fixed');
-  }
+  };
 
   burgerBtn.addEventListener('click', () => {
     burgerBtn.classList.toggle('burger--active');
