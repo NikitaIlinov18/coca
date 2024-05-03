@@ -15,6 +15,10 @@
       align-items: start;
       grid-template-columns: repeat(2, 1fr);
     }
+
+    @include small-mobile {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -37,13 +41,8 @@
 
     &-text {
       font-weight: 500;
-      font-size: 18px;
       line-height: 178%;
       color: var(--neutral-color-150);
-
-      @include small-mobile {
-        font-size: 15px;
-      }
     }
 
     &-num {
