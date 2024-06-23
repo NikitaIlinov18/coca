@@ -3,7 +3,12 @@
   padding: 60px 0 91px;
 
   @include mobile {
-    margin-top: 0;
+    margin-top: 86px;
+    padding-bottom: 61px;
+  }
+
+  @include small-mobile {
+    padding-bottom: 41px;
   }
 
   &__title {
@@ -38,14 +43,12 @@
   }
 
   &__nav {
+    @include flex-all-center;
     position: absolute;
-    top: 97px;
+    top: 105px;
     left: 50%;
     z-index: var(--z-index-2);
-    display: flex;
     gap: 5px;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
     width: 80px;
     height: 80px;

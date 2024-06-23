@@ -1,13 +1,10 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
 
 export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
     slidesPerView: 'auto',
     spaceBetween: 32,
-    // loop: true,
     centeredSlides: true,
     navigation: {
       nextEl: '.insight__next',
@@ -22,9 +19,17 @@ export const useInsightSlider = () => {
         centeredSlides: false,
       },
     },
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    //   draggable: true,
-    // },
+  });
+};
+
+export const useTestimonialsSlider = () => {
+  var TestSwiper = new Swiper('.testimonials__slider', {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    loop: true,
+    navigation: {
+      nextEl: '.testimonials__next',
+      prevEl: '.testimonials__prev',
+    },
   });
 };
