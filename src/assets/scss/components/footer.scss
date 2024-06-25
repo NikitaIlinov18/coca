@@ -76,7 +76,9 @@
     }
 
     &-info {
-      text-align: center;
+      @include mini-desktop {
+        text-align: center;
+      }
     }
 
     &-descr {
@@ -103,6 +105,11 @@
         justify-items: center;
         grid-template-columns: repeat(2, 1fr);
         text-align: center;
+      }
+
+      @include mobile {
+        gap: 20px;
+        grid-template-columns: 1fr;
       }
 
       &-col {
@@ -201,6 +208,11 @@
     font-weight: 500;
     line-height: 143%;
 
+    @include mobile {
+      gap: 24px;
+      flex-direction: column;
+    }
+
     &-link {
       position: relative;
       color: #fff;
@@ -233,5 +245,23 @@
     font-weight: 500;
     line-height: 143%;
     color: #fff;
+  }
+}
+
+@include mobile {
+  .accordion {
+    &-list {
+      width: 100%;
+  
+      &__content {
+        overflow: hidden;
+        max-height: 0;
+        transition: var(--transition);
+      }
+  
+      &__control {
+        @include flex-all-center;
+      }
+    }
   }
 }
