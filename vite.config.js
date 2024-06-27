@@ -5,16 +5,19 @@ import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   root: './src',
+  base: '/',
   server: {
     port: 3000,
     open: true,
   },
+  publicDir: './src/assets',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
       input: {
         main: './src/index.html',
+        pricing: './src/pricing.html',
       },
     },
   },
