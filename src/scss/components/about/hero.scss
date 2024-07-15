@@ -1,0 +1,13 @@
+.hero {
+  padding: 105px 0 160px;
+
+  &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
+  }
+
+  &__bottom {
+    @include flex-justify-between;
+    margin-bottom: 135px;
+  }
+}
