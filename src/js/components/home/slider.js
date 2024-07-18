@@ -38,13 +38,11 @@ export const useAboutHeroSlider = () => {
   var TestSwiper = new Swiper('.abouthero__slider', {
     slidesPerView: 1.05,
     spaceBetween: 32,
-    // centeredSlides: true,
     loop: true,
     navigation: {
       nextEl: '.abouthero__next',
       prevEl: '.abouthero__prev',
     },
-    // slidesPerGroup: 2,
     breakpoints: {
       1391: {
         slidesPerView: 2.53,
