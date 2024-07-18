@@ -1,0 +1,153 @@
+.team {
+  padding: 160px 0;
+
+  @include tablet {
+    padding: 80px 0;
+  }
+
+  @include small-mobile {
+    padding: 40px 0 80px;
+  }
+
+  &__head {
+    margin-bottom: 80px;
+    max-width: 903px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__descr {
+    max-width: 534px;
+    font-weight: 500;
+    line-height: 178%;
+    color: #7e8492;
+  }
+
+  &__slider {
+    margin-bottom: 100px;
+
+    @include small-tablet {
+      margin-bottom: 60px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__nav {
+    @include flex-all-center;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    z-index: var(--z-index-2);
+    gap: 5px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    transform: translateX(-307%) translateY(89%);
+
+    @include mini-desktop {
+      transform: translateX(-265%) translateY(27%);
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__prev,
+  &__next {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &__img {
+    margin-bottom: 16px;
+  }
+
+  &__contact {
+    @include flex-justify-between;
+    gap: 10px;
+    max-width: 379px;
+
+    &-name {
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--neutral-color-100);
+    }
+
+    &-position {
+      font-weight: 500;
+      color: #7e8492;
+    }
+
+    &-name,
+    &-position {
+      line-height: 150%;
+    }
+
+    &-socials {
+      @include flex-justify-center;
+      gap: 8px;
+
+      & a {
+        & svg {
+          & path {
+            fill: var(--neutral-color-100);
+          }
+        }
+      }
+    }
+  }
+
+  &__marketing {
+    @include flex-justify-between;
+    gap: 20px;
+
+    @include mini-desktop {
+      flex-direction: column;
+    }
+
+    &-title {
+      max-width: 626px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+      color: var(--neutral-color-100);
+    }
+
+    &-right {
+      max-width: 506px;
+    }
+
+    &-title,
+    &-right {
+      @include mini-desktop {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+
+    &-descr {
+      margin-bottom: 24px;
+      font-weight: 500;
+      line-height: 178%;
+      color: #7e8492;
+    }
+
+    &-btn {
+      font-weight: 600;
+      color: var(--neutral-color-100);
+    }
+  }
+}
