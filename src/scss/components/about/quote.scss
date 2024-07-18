@@ -1,0 +1,48 @@
+.quote {
+  &__container {
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @include mobile {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__inner {
+    @include flex-all-between;
+    gap: 50px;
+
+    @include mini-desktop {
+      flex-direction: column;
+    }
+
+    @include mobile {
+      gap: 25px;
+    }
+  }
+
+  &__title {
+    max-width: 480px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
+
+  &__text {
+    max-width: 522px;
+    font-weight: 600;
+    line-height: 150%;
+    color: var(--neutral-color-100);
+  }
+
+  &__title,
+  &__text {
+    @include mini-desktop{
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+}
