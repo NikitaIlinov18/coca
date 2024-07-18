@@ -1,13 +1,155 @@
 .hero {
   padding: 105px 0 160px;
 
+  @include mini-desktop {
+    padding-top: 40px;
+  }
+
+  @include tablet {
+    padding-bottom: 80px;
+  }
+
+  @include mobile {
+    padding: 20px 0 40px;
+  }
+
   &__title {
     margin-bottom: 118px;
     max-width: 959px;
+
+    @include mini-desktop {
+      margin-bottom: 60px;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__subtitle {
+    @include tablet {
+      max-width: 70%;
+    }
+
+    @include mobile {
+      max-width: 100%;
+    }
+
+    & br {
+      @include tablet {
+        display: none;
+      }
+    }
   }
 
   &__bottom {
     @include flex-justify-between;
+    gap: 20px;
     margin-bottom: 135px;
+
+    @include mobile {
+      gap: 10px;
+      flex-direction: column;
+      align-items: end;
+      margin-bottom: 50px;
+    }
+
+    @include small-mobile {
+      gap: 0;
+      margin-bottom: 20px;
+    }
+
+    & svg {
+      @include small-mobile {
+        transform: scale(.8);
+      }
+
+      & path {
+        fill: var(--neutral-color-100);
+      }
+
+      & circle {
+        fill: var(--neutral-color-100);
+      }
+    }
+  }
+}
+
+.abouthero {
+  &__container {
+    margin-right: 0;
+    margin-left: 8vw;
+    padding-right: 0;
+  }
+
+  &__nav {
+    @include flex-all-center;
+    position: absolute;
+    top: 105px;
+    left: 50%;
+    z-index: var(--z-index-2);
+    gap: 5px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    transform: translateX(-225%);
+
+    @include mini-desktop {
+      transform: translateX(-175%);
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__prev,
+  &__next {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &__article {
+    &-head {
+      margin-bottom: 32px;
+      max-width: 494px;
+
+      @include small-tablet {
+        margin-bottom: 10px;
+      }
+    }
+
+    &-title {
+      margin: 24px 0 8px;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: -0.01em;
+      color: var(--neutral-color-100);
+
+      @include small-tablet {
+        margin-top: 10px;
+      }
+    }
+
+    &-descr {
+      font-weight: 500;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+
+      @include small-tablet {
+        font-size: 14px;
+      }
+    }
+
+    &-btn {
+      padding: 16px 32px;
+      color: #fff;
+      background: #1d1e25;
+
+      @include small-tablet {
+        font-size: 14px;
+      }
+    }
   }
 }

@@ -33,3 +33,43 @@ export const useTestimonialsSlider = () => {
     },
   });
 };
+
+export const useAboutHeroSlider = () => {
+  var TestSwiper = new Swiper('.abouthero__slider', {
+    slidesPerView: 1.05,
+    spaceBetween: 32,
+    // centeredSlides: true,
+    loop: true,
+    navigation: {
+      nextEl: '.abouthero__next',
+      prevEl: '.abouthero__prev',
+    },
+    // slidesPerGroup: 2,
+    breakpoints: {
+      1391: {
+        slidesPerView: 2.53,
+      },
+      1321: {
+        slidesPerView: 2.58,
+      },
+      1281: {
+        slidesPerView: 2.6,
+      },
+      1217: {
+        slidesPerView: 2.62,
+      },
+      1201: {
+        slidesPerView: 2.65,
+      },
+      993: {
+        slidesPerView: 2.5,
+      },
+      769: {
+        slidesPerView: 2.3,
+      },
+      577: {
+        slidesPerView: 1.5,
+      },
+    },
+  });
+};
