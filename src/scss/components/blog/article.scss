@@ -1,0 +1,56 @@
+.article {
+  padding: 120px 0;
+  background: var(--overview-bg-color);
+
+  @include small-tablet {
+    padding: 60px 0;
+  }
+
+  &__content {
+    &-list {
+      display: grid;
+      gap: 159px 32px;
+      grid-template-columns: repeat(2, 1fr);
+
+      @include tablet {
+        gap: 80px;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+
+    &-item {
+      max-width: 584px;
+
+      &:last-child {
+        margin-top: -245px;
+
+        @include tablet {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &-img,
+    &-title {
+      margin-bottom: 24px;
+    }
+
+    &-title {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    &-descr {
+      max-width: 515px;
+      font-weight: 500;
+      line-height: 178%;
+      color: #7e8492;
+
+      @include tablet {
+        max-width: 100%;
+      }
+    }
+  }
+}
