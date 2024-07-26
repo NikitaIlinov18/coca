@@ -23,3 +23,25 @@ export const useBlogHeroSlider = () => {
     },
   });
 };
+
+export const useBottomSlider = () => {
+  new Swiper('.bottom__slider', {
+    slidesPerView: 1,
+    spaceBetween: 32,
+    navigation: {
+      nextEl: '.bottom__next',
+      prevEl: '.bottom__prev',
+    },
+    breakpoints: {
+      577: {
+        slidesPerView: 2,
+      },
+      769: {
+        slidesPerView: 2.5,
+      },
+      993: {
+        slidesPerView: 3,
+      },
+    },
+  });
+};

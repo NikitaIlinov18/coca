@@ -36,6 +36,9 @@
   // button hover
   --button-hover: #46B277;
 
+  // button disabled
+  --button-disabled: #ededed;
+
   @include mini-desktop {
     --container-width: 1000px;
   }
@@ -74,4 +77,7 @@
 
   // overview colors
   --overview-bg-color: #18181d;
+
+  // button disabled
+  --button-disabled: #606060;
 }
