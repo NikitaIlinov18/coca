@@ -7,7 +7,7 @@
     width: 551px;
     height: 551px;
     background: #fa7515;
-    opacity: 0.2;
+    opacity: .1;
     filter: blur(220px);
 
     @include mini-desktop {
@@ -27,7 +27,8 @@
     bottom: 0;
     width: 525px;
     height: 525px;
-    fill: var(--success-color-70);
+    background: var(--success-color-70);
+    opacity: .2;
     filter: blur(180px);
 
     @include mini-desktop {
