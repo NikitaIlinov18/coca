@@ -99,6 +99,10 @@
       padding: 10px 14px;
       width: 100%;
 
+      &.valid-error {
+        border-color: red;
+      }
+
       &--textarea {
         outline: none;
         height: 134px;
