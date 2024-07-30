@@ -57,6 +57,7 @@
     }
     
     @include mobile {
+      display: none;
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -65,11 +66,27 @@
     }
   }
 
-  &__item {
+  &__slide-item {
+    margin-right: auto;
+    margin-left: auto;
+    
+  }
+  
+  &__item,
+  &__slide-item-inner {
     @include flex-all-center;
     border-radius: 16px;
     width: 160px;
     height: 90px;
     background-color: #fff;
+  }
+
+  &__slider {
+    display: none !important;
+    width: 100%;
+
+    @include mobile {
+      display: block !important;
+    }
   }
 }
