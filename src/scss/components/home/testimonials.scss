@@ -144,16 +144,39 @@
       height: 40px;
     }
 
-    & svg path {
-      transition: fill var(--transition);
+    & svg,
+    & path {
+      fill: var(--neutral-color-40);
+    }
+
+    &.swiper-button-disabled {
+      border: 1px solid var(--button-disabled);
+      background: var(--neutral-color-10);
+      cursor: default;
+
+      & svg,
+      & path {
+        fill: var(--button-disabled);
+      }
     }
 
     &:hover {
-      border-color: var(--neutral-color-100);
-      background-color: var(--neutral-color-100);
+      border: 1px solid var(--neutral-color-100);
+      background: var(--neutral-color-100);
 
-      & svg path {
+      & svg,
+      & path {
         fill: var(--neutral-color-10);
+      }
+
+      &.swiper-button-disabled {
+        border: 1px solid var(--button-disabled);
+        background: var(--neutral-color-10);
+
+        & svg,
+        & path {
+          fill: var(--button-disabled);
+        }
       }
     }
   }

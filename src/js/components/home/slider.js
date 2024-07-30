@@ -1,4 +1,5 @@
 import Swiper from 'swiper/bundle';
+import 'swiper/css/effect-fade';
 import 'swiper/css';
 
 export const useInsightSlider = () => {
@@ -26,7 +27,10 @@ export const useTestimonialsSlider = () => {
   new Swiper('.testimonials__slider', {
     slidesPerView: 1,
     spaceBetween: 32,
-    loop: true,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
     navigation: {
       nextEl: '.testimonials__next',
       prevEl: '.testimonials__prev',
