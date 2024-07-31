@@ -76,12 +76,6 @@
 }
 
 .abouthero {
-  &__container {
-    margin-right: 0;
-    margin-left: 8vw;
-    padding-right: 0;
-  }
-
   &__nav {
     @include flex-all-center;
     position: absolute;
