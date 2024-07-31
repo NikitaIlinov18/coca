@@ -1,17 +1,31 @@
 .header {
   padding: 26px 0 22px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition);
   
   &--fixed {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    z-index: var(--z-index-4);
+    z-index: var(--z-index-3);
     background-color: var(--neutral-color-10);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-117px);
+    transition: all var(--transition);
+  }
+
+  &--show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    transition: all var(--transition);
   }
 
   @include mobile {
